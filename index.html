@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<script language="javascript" src="./abc.js"></script>
+    <link rel="stylesheet" type="text/css" href='./index.css' />
+</head>
+<body>
+    <div class="box">
+        <h2>Warning</h2>
+    </div>
+
+    <img id="alice" src="./coronavirus.png" />
+    <script>
+        
+        // elem.animate(
+        //     [
+        //     {transform: 'translate(0,0)', background: "red"},
+        //     {transform: 'translate(600px,0)'},
+        //     {transform: 'translate(600px, 600px)', background: "green"},
+        //     {transform: 'translate(0,600px)', background: "blue"},
+        //     {transform: 'translate(0,0)'}
+        // ]
+        // ,{
+        //     duration: 4000,
+        //     iterations: Infinity,
+            
+        //     easing: 'ease-out'
+        // })
+
+        // elem.animate(
+        //     // {
+        //     // transform: ['translate(600px, 0) scale(1)','scale(1.5)', 'scale(1)']
+        //     // }
+        //     [{transform: 'scale(1)', color: "white"},
+        //     {transform: 'scale(1.5)', color: "white"},
+        //     {transform: 'scale(1)', color: "white"},
+        // ]
+        // ,{
+        //     duration: 1000,
+        //     iterations: Infinity
+        // })
+        // elem.pause()
+        
+        
+        var aliceTumbling = [
+  { transform: 'rotate(0) translate3D(0%, 0%, 0)', color: '#000' },
+  { color: '#431236', offset: 0.3},
+  { transform: 'rotate(360deg) translate3D(0%, 0%, 0)', color: '#000' }
+];
+
+        const aliceTiming = {
+            duration: 3000,
+            iterations: Infinity
+        }
+
+        const a = document.querySelector('#alice')
+        const alice = a.animate(aliceTumbling, aliceTiming)
+        console.log(alice)
+       
+        function goIncrese(){
+           
+            alice.playbackRate *= 1.1;
+        }
+        function goDecrese(){
+           
+           alice.playbackRate /= 2
+       }
+        // alice.pause();
+    </script>
+<button onclick="alice.pause()" >Pause</button>
+<button onclick="alice.play()" >Play</button>
+<button onclick="goIncrese()" >Increse</button>
+<button onclick="goDecrese()" >Decrese</button>
+</body>
+</html>

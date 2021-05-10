@@ -1,0 +1,43 @@
+/* .box{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    /* border: 2px solid black; */
+    /* border: none;
+    margin: 100px 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+ /* }  */
+ 
+
+ body{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+ }
+
+ img{
+     width: 209px;
+    
+ }
+
+ button{
+     margin: 20px;
+     padding: 20px;
+ }
+
+ /* @keyframes aliceTumbling {
+    0% { */
+      /* color: #000; */
+      /* transform: rotate(0) translate3D(-50%, -50%, 80%);
+    }
+    30% { */
+      /* color: #431236; */
+    /* }
+    100% { */
+      /* color: #000; */
+      /* transform: rotate(360deg) translate3D(-50%, -50%, 0);
+    }
+  } */
